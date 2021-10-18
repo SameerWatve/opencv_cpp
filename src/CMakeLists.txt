@@ -5,8 +5,7 @@ project (opencv_cpp)
 find_package(OpenCV REQUIRED)
 
 file(GLOB opencv_cpp_SRC
-     "*.cpp"
+     "cam.cpp"
 )
-
 add_executable(opencv_cpp ${opencv_cpp_SRC})
 target_link_libraries(opencv_cpp PUBLIC ${OpenCV_LIBS})

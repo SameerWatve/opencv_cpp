@@ -1,15 +1,15 @@
 #include <opencv2/opencv.hpp>
-#include <cstdio.h>
+#include <iostream>
 
 auto main(int argc, char **argv) -> int
 {
   if (argc != 2) {
-    printf("usage: hello_opencv <path_image>\n");
+    std::cout << "usage: hello_opencv <path_image>" << std::endl;
     return -1;
   }
   cv::Mat image = cv::imread(argv[1], 1);
   if (!image.data) {
-    printf("No image data \n");
+    std::cout << "No image data" << std::endl;
     return -1;
   }
   image = image / 2;
