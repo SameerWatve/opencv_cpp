@@ -13,6 +13,6 @@ auto main(int argc, char **argv) -> int
     return -1;
   }
   image = image / 2;
-  cv::imwrite("./data/result.png", image);
+  cv::imwrite("../data/result.png", image);
   return 0;
 }
